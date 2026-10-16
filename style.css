@@ -1,0 +1,219 @@
+
+:root {
+  /* Fonte */
+  --font-primary: 'Inter', sans-serif;
+  
+  /* Background */
+  --bg-primary: #F5F5F5;
+  --bg-secondary: #FFFFFF;
+  
+  --bg-btn-primary: #0071E3;
+  --bg-btn-secondary: transparent;
+
+  --bg-overlay: #00000087;
+
+  /* Bordas dos botões */
+  --border-button: 0.0625rem solid #0071E3;
+  
+  /* Cores do texto */
+
+  --color-text-btn-primary: #ffffff;
+  --color-text-btn-secondary: #0071E3;
+
+  --color-text-primary: #868686;
+  --color-text-secondary: #1c1c1c;
+
+  --color-text-gradient: linear-gradient(135deg, #00713E, #34CCE7);  
+}
+/* Reset padrões do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: var(--bg-primary);
+  font-family: var(--font-primary);
+}
+
+h2{
+  color: var(--color-text-secondary);
+}
+
+p{
+  color: var(--color-text-primary);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--bg-secondary);
+  padding:  .5rem 1rem;
+  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.29);
+
+  position: sticky;
+  top: 0;
+
+  & h1 {
+    font-weight: 700;
+    & a{
+      font-size: 1.5rem;
+      color: var(--color-text-secondary);
+    }
+  }
+  & ul {
+    display: flex;
+    gap: 0.5rem;
+      & a {
+        color: var(--color-text-primary);
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
+        padding: 0.5rem;
+        &:hover {
+          color: black;
+        }
+    }
+  }
+}
+
+span{
+  background: var(--color-text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  height: 90vh;
+  padding: 1rem;
+    & h2 {
+      font-size: clamp(3rem, 5vw, 5rem);
+      margin-bottom: 1rem;
+    }
+    & p {
+      font-size: clamp(1.125rem, 3vw, 1.5rem);
+      line-height: 1.5;
+    }
+    & ul{
+      margin-top: 1rem;
+      width: 100%;
+      max-width: 37rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      & li:first-child a{
+        background-color: var(--bg-btn-primary);
+        color: var(--color-text-btn-primary);
+      }
+      & li:last-child a{
+        background-color: var(--bg-btn-secondary);
+        color: var(--color-text-btn-secondary);
+        border: var(--border-button);
+      }
+      & a {
+        height: 3rem;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 3rem;
+      }
+  }
+}
+
+.sobre-section {
+  background-color: var(--bg-secondary);
+  
+  & img{
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 1.5rem;
+  }
+}
+
+.sobre-section, .projetos-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.sobre-section h2, .projetos-section h2 {
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.sobre-section p, .projetos-section p {
+  margin-bottom: 1rem;
+  font-size: clamp(1.125rem, 3vw, 1.25rem);
+  line-height: 1.5;
+}
+
+.projetos-section li{
+  margin-bottom: 1.5rem;
+  border-radius: 2rem;
+  height: 25rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  & article{
+    background-color: var(--bg-overlay);
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: end;
+    text-align: left;
+  }
+  & h3{
+    font-size: 1.5rem;
+  }
+  & h3, p{
+    color: var(--color-text-btn-primary);
+  }
+  & a{
+    background-color: var(--bg-btn-primary);
+    color: var(--color-text-btn-primary);
+    height: 3rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3rem;
+  }
+}
+.projetos-section li:first-child{
+  background-image: url(./img/photo-code.jpg);
+}
+.projetos-section li:nth-child(2){
+  background-image: url(./img/photo-code.jpg);
+}
+.projetos-section li:last-child{
+  background-image: url(./img/photo-code.jpg);
+}
+
+
+
+/* Estilo para imagens(provisório) */
+img {
+  max-width: 100%;
+}
