@@ -149,6 +149,7 @@ section {
   & p {
     font-size: clamp(1.125rem, 3vw, 1.5rem);
     line-height: 1.5;
+    max-width: 38ch;
   }
 
   & ul {
@@ -172,6 +173,12 @@ section {
   }
 }
 
+.projetos-section p {
+    max-width: 50ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .projetos-section li {
   margin-bottom: 1.5rem;
   border-radius: 2rem;
@@ -193,8 +200,7 @@ section {
     font-size: 1.5rem;
   }
 
-  & h3,
-  p {
+  & h3, p {
     color: var(--color-text-btn-primary);
   }
 }
@@ -271,7 +277,43 @@ footer {
     }
   }
 }
-/* Estilo para imagens(provisório) */
-img {
-  max-width: 100%;
+
+@media screen and (min-width: 48rem) {
+  .hero-section {
+    & ul {
+      flex-direction: row;
+      justify-content: center;
+      & li {
+        width: 100%;
+      }
+    }
+  }
+  .sobre-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .projetos-section {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      padding-top: 3rem;
+    }
+  }
+
+  .contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    & form {
+      width: 100%;
+      max-width: 40rem;
+    }
+    & .contato-text {
+      width: 48ch;
+    }
+  }
 }
