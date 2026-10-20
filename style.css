@@ -134,15 +134,19 @@ section {
   height: 3rem;
   border-radius: 3rem;
 }
+
 .btn-primary {
   background-color: var(--bg-btn-primary);
   color: var(--color-text-btn-primary);
+  cursor: pointer;
 }
+
 .btn-secondary {
   background-color: var(--bg-btn-secondary);
   color: var(--color-text-btn-secondary);
   border: var(--border-button);
 }
+
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -187,9 +191,9 @@ section {
 }
 
 .projetos-section p {
-    max-width: 50ch;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 50ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .projetos-section li {
@@ -213,7 +217,8 @@ section {
     font-size: 1.5rem;
   }
 
-  & h3, p {
+  & h3,
+  p {
     color: var(--color-text-btn-primary);
   }
 }
@@ -236,6 +241,7 @@ section {
   max-width: 45ch;
   margin: 1rem auto;
 }
+
 .contato form {
   display: flex;
   flex-direction: column;
@@ -270,7 +276,8 @@ form button {
   font-family: var(--font-primary);
 }
 
-form input, form button {
+form input,
+form button {
   height: 3rem;
 }
 
@@ -289,12 +296,12 @@ footer {
   text-align: center;
   gap: 1rem;
 
-  & ul{
+  & ul {
     display: flex;
     align-items: center;
     gap: 1rem;
 
-    & a{
+    & a {
       display: flex;
       align-items: center;
       gap: .25rem;
@@ -308,17 +315,20 @@ footer {
     & ul {
       flex-direction: row;
       justify-content: center;
+
       & li {
         width: 100%;
       }
     }
   }
+
   .sobre-section {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 4rem;
   }
+
   .projetos-section {
     ul {
       display: grid;
@@ -330,17 +340,18 @@ footer {
 }
 
 @media screen and (min-width: 75rem) {
-.projetos-section {
+  .projetos-section {
     ul {
       grid-template-columns: repeat(3, 1fr);
     }
-}
-  .contato{
+  }
+
+  .contato {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
     & div p {
-        margin: 1rem 0;
+      margin: 1rem 0;
     }
   }
 }
