@@ -232,6 +232,10 @@ section {
   background-image: url(./img/photo-code.jpg);
 }
 
+.contato section div p {
+  max-width: 45ch;
+  margin: 1rem auto;
+}
 .contato form {
   display: flex;
   flex-direction: column;
@@ -239,6 +243,9 @@ section {
   background-color: var(--bg-secondary);
   padding: .875rem 1rem;
   border-radius: 1.5rem;
+  width: 100%;
+  max-width: 30rem;
+  margin: auto;
 }
 
 form input,
@@ -267,6 +274,9 @@ form input, form button {
   height: 3rem;
 }
 
+form textarea {
+  height: 20rem;
+}
 
 footer {
   background-color: var(--bg-secondary);
@@ -312,23 +322,25 @@ footer {
   .projetos-section {
     ul {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 1rem;
-      padding-top: 3rem;
+      margin-top: 2rem;
     }
   }
+}
 
-  .contato {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap:2rem;
-    & form {
-      width: 100%;
-      max-width: 40rem;
+@media screen and (min-width: 75rem) {
+.projetos-section {
+    ul {
+      grid-template-columns: repeat(3, 1fr);
     }
-    & .contato-text {
-      width: 48ch;
+}
+  .contato{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    & div p {
+        margin: 1rem 0;
     }
   }
 }
