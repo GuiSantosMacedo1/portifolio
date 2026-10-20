@@ -21,6 +21,7 @@
 
   --color-text-primary: #868686;
   --color-text-secondary: #1c1c1c;
+  --hover-color: #1c1c1c;
 
   --color-text-gradient: linear-gradient(135deg, #7d0451, #34CCE7);
 }
@@ -38,6 +39,36 @@
 html {
   scroll-behavior: smooth;
 }
+:root:has(#dark-mode:checked) {
+  --bg-primary: #1c1c1c;
+  --bg-secondary: #2b2b2b;
+  --color-text-primary: #d1d1d1;
+  --color-text-secondary: #ffffff;
+  --color-text-btn-secondary: #ffffff;
+  --border-button: 0.0625rem solid #34CCE7;
+  --hover-color: #FFFFFF;
+}
+
+#dark-mode {
+  display: none;
+}
+.dark-mode-label {
+  cursor: pointer;
+  color: var(--color-text-primary);
+}
+i.fa-moon {
+  display: inline-block;
+}
+#dark-mode:checked + label i.fa-moon {
+  display: none;
+}
+i.fa-sun {
+  display: none;
+}
+#dark-mode:checked + label i.fa-sun {
+  display: inline-block;
+}
+
 
 body {
   background-color: var(--bg-primary);
@@ -76,7 +107,9 @@ header {
   & ul {
     display: flex;
     gap: 0.5rem;
-
+    & li:hover{
+      scale: 1.05;
+    }
     & a {
       color: var(--color-text-primary);
       font-weight: 500;
@@ -84,7 +117,7 @@ header {
       padding: 0.5rem;
 
       &:hover {
-        color: black;
+        color: var(--hover-color);
       }
     }
   }
