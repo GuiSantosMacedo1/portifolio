@@ -92,9 +92,22 @@ header {
 
 h2 span {
   background: var(--color-text-gradient);
+  /* background-size: 200% 200%; */
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  animation: gradient 1s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 25%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 section {
@@ -210,7 +223,9 @@ section {
 }
 
 .projetos-section li:nth-child(2) {
-  background-image: url(./img/photo-code.jpg);
+  background-image: url(./img/financial-Organization.png);
+  object-fit: cover;
+  object-position: top left;
 }
 
 .projetos-section li:last-child {
