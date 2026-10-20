@@ -22,7 +22,7 @@
   --color-text-primary: #868686;
   --color-text-secondary: #1c1c1c;
 
-  --color-text-gradient: linear-gradient(135deg, #00713E, #34CCE7);
+  --color-text-gradient: linear-gradient(135deg, #7d0451, #34CCE7);
 }
 
 /* Reset padrões do navegador */
@@ -91,25 +91,14 @@ header {
 }
 
 h2 span {
-  background: var(--color-text-gradient);
-  /* background-size: 200% 200%; */
+  background-image: var(--color-text-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  animation: gradient 1s ease-in-out infinite;
-  animation-direction: alternate;
+  background-size: 300% 300%;
+  background-position: 0% 25%;
+  animation: gradient 3s linear 0s infinite normal none;
 }
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 25%;
-  }
-
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
 section {
   padding: 6rem 1rem;
   text-align: center;
@@ -156,19 +145,22 @@ section {
   text-align: center;
   height: 90vh;
   padding: 1rem;
-
+  
   & h2 {
     font-size: clamp(3rem, 5vw, 5rem);
     margin-bottom: 1rem;
     max-width: 20ch;
+    animation: alternate fadeIn 1s ease-in-out both;
   }
 
   & p {
     font-size: clamp(1.125rem, 3vw, 1.5rem);
     line-height: 1.5;
     max-width: 38ch;
+    animation: alternate fadeIn 1s ease-in-out both;
+    animation-delay: 200ms;
   }
-
+  
   & ul {
     margin-top: 1rem;
     width: 100%;
@@ -176,6 +168,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    animation: alternate fadeIn 1s ease-in-out both;
+    animation-delay: 400ms;
   }
 }
 
@@ -315,7 +309,7 @@ footer {
     & ul {
       flex-direction: row;
       justify-content: center;
-
+      
       & li {
         width: 100%;
       }
@@ -353,5 +347,33 @@ footer {
     & div p {
       margin: 1rem 0;
     }
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 25%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 25%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
