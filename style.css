@@ -106,6 +106,7 @@ header {
 
   position: sticky;
   top: 0;
+  z-index: 1000;
 
   & h1 {
     font-weight: 700;
