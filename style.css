@@ -9,6 +9,8 @@
   --bg-btn-primary: #0071E3;
   --bg-btn-secondary: transparent;
 
+  --bg-btn-hover: #00458a;
+
   --bg-overlay: #00000087;
 
   /* Bordas dos botões */
@@ -56,6 +58,11 @@ html {
   cursor: pointer;
   color: var(--color-text-primary);
 }
+#dark-mode:focus-visible + .dark-mode-label {
+  outline: 0.125rem solid var(--color-text-btn-secondary);
+  outline-offset: 0.2rem;
+  border-radius: 0.25rem;
+}
 i.fa-moon {
   display: inline-block;
 }
@@ -69,6 +76,11 @@ i.fa-sun {
   display: inline-block;
 }
 
+*:focus-visible {
+  outline: 0.125rem solid var(--color-text-btn-secondary);
+  outline-offset: 0.2rem;
+  border-radius: 0.25rem;
+}
 
 body {
   background-color: var(--bg-primary);
@@ -161,12 +173,23 @@ section {
   background-color: var(--bg-btn-primary);
   color: var(--color-text-btn-primary);
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--bg-btn-hover);
+  }
 }
 
 .btn-secondary {
   background-color: var(--bg-btn-secondary);
   color: var(--color-text-btn-secondary);
   border: var(--border-button);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--bg-btn-hover);
+    color: var(--color-text-btn-primary);
+  }
 }
 
 .hero-section {
