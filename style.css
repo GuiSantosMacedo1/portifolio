@@ -376,10 +376,10 @@ footer {
   }
 
   .sobre-section {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(20rem, 30rem);
     align-items: center;
-    justify-content: center;
-    gap: 4rem;
+    gap: 5rem;
   }
 
   .projetos-section {
