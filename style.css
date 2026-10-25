@@ -178,6 +178,7 @@ section {
 
   &:hover {
     background-color: var(--bg-btn-hover);
+    scale: 1.05;
   }
 }
 
@@ -190,6 +191,7 @@ section {
   &:hover {
     background-color: var(--bg-btn-hover);
     color: var(--color-text-btn-primary);
+    scale: 1.05;
   }
 }
 
