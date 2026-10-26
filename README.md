@@ -1,2 +1,3 @@
 # portifolio
-Site portifólio de Guilherme Santos, reunindo experiências, contatos, e projetos relevantes.
+Site portifólio de Guilherme Santos, reunindo experiências, formas de contato, e projetos relevantes.
+
